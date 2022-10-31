@@ -1,0 +1,11 @@
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand">{{title}}</a>
+        <div class="d-flex">
+            <div class="input-group">
+                <input class="form-control border-end-0 border rounded-pill" type="text" placeholder="Search"
+                    aria-label="Search" [(ngModel)]="data" (ngModelChange)="onUserType($event)">
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,14 @@
+<div class="card mt-3">
+    <img [src]="site.logo || defaultLogo" class="card-img-top mt-2" alt="website" [ngClass]="{'default': !site.hasImage}">
+    <div class="card-body">
+        <h6 class="card-title">{{site.name}}</h6>
+        <span class="text-muted text-sm text-nowrap">{{site.username}}</span>
+    </div>
+    <div class="card__inner">
+        <div class="icons-container">
+            <fa-icon class="me-3" [icon]="faUpRightFromSquare" ngbTooltip="Navigate" (click)="onClickNavigate()"></fa-icon>
+            <fa-icon class="me-3" [icon]="faPenToSquare" ngbTooltip="Edit" (click)="onClickEdit()"></fa-icon>
+            <fa-icon [icon]="faTrash" ngbTooltip="Delete" (click)="onClickDelete()"></fa-icon>
+        </div>
+    </div>
+</div>

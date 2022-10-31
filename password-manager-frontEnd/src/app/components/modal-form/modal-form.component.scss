@@ -1,0 +1,29 @@
+.invalid {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: .875em;
+    color: #dc3545;
+    margin: 0.25rem 0 0 0.2rem;
+}
+
+label {
+    color: grey;
+    font-size: 0.87rem;
+}
+
+.input-group-text {
+    background-color: white;
+}
+
+.password {
+    border-right: none;
+}
+
+.copy-icon {
+    border-left: none;
+    border-right: none;
+}
+
+.show-icon {
+    border-left: none;
+}

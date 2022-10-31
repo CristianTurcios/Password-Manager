@@ -1,0 +1,23 @@
+<app-header [title]="title" (onSearch)="onSearch($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <h3 class="title-section__header mt-4 mb-4">My Secure Vault Sites</h3>
+    <hr>
+    <app-empty-result *ngIf="sites.length === 0 && !isLoading"></app-empty-result>
+    <div class="col-xxl-3 col-xl-4 col-md-6 col-sm-12 col-xs-12" *ngFor="let site of sites" >
+      <div *ngIf="!isLoading" >
+        <app-card
+          [site]="site"
+          (edit)="onClickEdit($event)"
+          (delete)="onClickDelete($event)"
+          (navigate)="onClickNavigate($event)"
+        >
+        </app-card>
+      </div>
+    </div>
+    <app-loading *ngIf="isLoading"></app-loading>
+  </div>
+</div>
+<a href="javascript:;" class="float" (click)="openModal()">
+  <fa-icon [icon]="faPlus" placement="top" ngbTooltip="Add"></fa-icon>
+</a>
