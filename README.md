@@ -93,10 +93,10 @@ $ ng test
 
 ## Web App Screenshots
 
-![List of Competitions](src/assets/img/competitions.png)
+![List of Sites](screenshots/1.png)
 
-![List of Teams](src/assets/img/teams.png)
+![Add new site](screenshots/2.png)
 
-![List of Players](src/assets/img/players.png)
+![List of Sites - Mobile view](screenshots/3.png)
 
-![List of Competitions- Mobile view](src/assets/img/competitions-mobile.png)
+![Add new site - Mobile view](screenshots/4.png)
