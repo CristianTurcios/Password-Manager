@@ -23,4 +23,11 @@ describe('HeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should emit select site when user clicks on delete icon', () => {
+    spyOn(component.onSearch, 'emit');
+    const search = 'Netflix';
+    component.onUserType(search);
+    expect(component.onSearch.emit).toHaveBeenCalledWith(search);
+  });
 });

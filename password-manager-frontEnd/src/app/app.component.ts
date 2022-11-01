@@ -43,7 +43,6 @@ export class AppComponent implements OnInit, OnDestroy {
       }, () => this.sites = []);
   }
 
-  
   /**
    * Description: filter sites based on user search criteria
    *
@@ -59,7 +58,6 @@ export class AppComponent implements OnInit, OnDestroy {
     this.sites = this.originalData;
   }
 
-  
   /**
    * Description: open modal to edit existing site
    *
@@ -99,10 +97,18 @@ export class AppComponent implements OnInit, OnDestroy {
     this.modalService.open(ModalFormComponent, { size: 'lg', centered: true });
   }
 
+  /**
+   * Description: directive to customize how NgForOf uniquely identifies items in an iterable.
+   *
+   */
   trackById(index: number, site: ISite): string {
     return site?.id || '';
   }
 
+  /**
+   * Description: Angular lifecycle hook
+   *
+   */
   ngOnDestroy() {
     this.subscription$.unsubscribe();
   }
