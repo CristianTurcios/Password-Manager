@@ -99,6 +99,10 @@ export class AppComponent implements OnInit, OnDestroy {
     this.modalService.open(ModalFormComponent, { size: 'lg', centered: true });
   }
 
+  trackById(index: number, site: ISite): string {
+    return site?.id || '';
+  }
+
   ngOnDestroy() {
     this.subscription$.unsubscribe();
   }

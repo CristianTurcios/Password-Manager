@@ -4,7 +4,7 @@
     <h3 class="title-section__header mt-4 mb-4">My Secure Vault Sites</h3>
     <hr>
     <app-empty-result *ngIf="sites.length === 0 && !isLoading"></app-empty-result>
-    <div class="col-xxl-3 col-xl-4 col-md-6 col-sm-12 col-xs-12" *ngFor="let site of sites" >
+    <div class="col-xxl-3 col-xl-4 col-md-6 col-sm-12 col-xs-12" *ngFor="let site of sites; trackBy: trackById" >
       <div *ngIf="!isLoading" >
         <app-card
           [site]="site"
